@@ -1,0 +1,31 @@
+services:
+  neon-local:
+    image: neondatabase/neon_local:latest
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env.development
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U neon -h localhost -p 5432 || exit 1']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env.development
+    environment:
+      NEON_LOCAL: 'true'
+      NEON_LOCAL_HOST: neon-local
+      DATABASE_URL: postgres://neon:npg@neon-local:5432/neondb
+    depends_on:
+      neon-local:
+        condition: service_healthy
+    restart: unless-stopped

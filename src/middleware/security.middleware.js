@@ -45,7 +45,7 @@ const securityMiddleware = async (req, res, next) => {
         path: req.path,
         userAgent: req.get('User-Agent'),
       });
-      res
+      return res
         .status(403)
         .json({
           error: 'Forbidden',
@@ -59,7 +59,7 @@ const securityMiddleware = async (req, res, next) => {
         userAgent: req.get('User-Agent'),
         method: req.method,
       });
-      res
+      return res
         .status(403)
         .json({
           error: 'Forbidden',
@@ -73,7 +73,7 @@ const securityMiddleware = async (req, res, next) => {
         path: req.path,
         userAgent: req.get('User-Agent'),
       });
-      res
+      return res
         .status(429)
         .json({ error: 'Too Many Requests', message: 'Rate limit exceeded' });
     } 

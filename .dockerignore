@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log*
+.git
+.gitignore
+.env
+.env.*
+logs
+*.log
+.neon_local
+AGENTS.md
+DOCKER.md
+README.md
+docker-compose*.yml
+.prettierrc
+.prettierignore
+eslint.config.js
