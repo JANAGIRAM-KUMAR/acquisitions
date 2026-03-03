@@ -25,13 +25,13 @@ cp .env.development .env.development.local   # optional: keep a personal copy
 
 Edit `.env.development` and set:
 
-| Variable | Description |
-|---|---|
-| `NEON_API_KEY` | Your Neon API key |
-| `NEON_PROJECT_ID` | Your Neon project ID |
-| `PARENT_BRANCH_ID` | *(optional)* Branch to fork from. Leave empty to use the project default branch |
-| `JWT_SECRET` | Any string for local JWT signing |
-| `ARCJET_KEY` | Your Arcjet key |
+| Variable           | Description                                                                     |
+| ------------------ | ------------------------------------------------------------------------------- |
+| `NEON_API_KEY`     | Your Neon API key                                                               |
+| `NEON_PROJECT_ID`  | Your Neon project ID                                                            |
+| `PARENT_BRANCH_ID` | _(optional)_ Branch to fork from. Leave empty to use the project default branch |
+| `JWT_SECRET`       | Any string for local JWT signing                                                |
+| `ARCJET_KEY`       | Your Arcjet key                                                                 |
 
 > `DATABASE_URL` is set automatically in `docker-compose.dev.yml` to `postgres://neon:npg@neon-local:5432/neondb`. You do **not** need to set it in `.env.development` when running via Docker.
 
@@ -42,6 +42,7 @@ docker compose -f docker-compose.dev.yml --env-file .env.development up --build
 ```
 
 This starts:
+
 1. **neon-local** — Neon Local proxy on port 5432 (creates an ephemeral branch)
 2. **app** — the API on port 3000, connected to neon-local
 
@@ -83,11 +84,11 @@ Production connects directly to your Neon Cloud database. No Neon Local proxy is
 
 Edit `.env.production` and set:
 
-| Variable | Description |
-|---|---|
+| Variable       | Description                                                                                                                |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | `DATABASE_URL` | Your full Neon Cloud connection string (e.g. `postgres://user:pass@ep-xxx.us-east-1.aws.neon.tech/neondb?sslmode=require`) |
-| `JWT_SECRET` | A strong, unique secret for production |
-| `ARCJET_KEY` | Your Arcjet key |
+| `JWT_SECRET`   | A strong, unique secret for production                                                                                     |
+| `ARCJET_KEY`   | Your Arcjet key                                                                                                            |
 
 ### 2. Start the app
 
@@ -138,15 +139,15 @@ docker build -t acquisitions-api .
 
 ## Environment Variables Reference
 
-| Variable | Dev | Prod | Description |
-|---|---|---|---|
-| `PORT` | 3000 | 3000 | Server listen port |
-| `NODE_ENV` | development | production | Environment mode |
-| `DATABASE_URL` | Set by compose | Neon Cloud URL | Postgres connection string |
-| `NEON_LOCAL` | `true` | *(unset)* | Enables Neon Local driver config |
-| `NEON_LOCAL_HOST` | `neon-local` | *(unset)* | Hostname of the Neon Local container |
-| `NEON_API_KEY` | Required | — | Neon API key (for neon-local container) |
-| `NEON_PROJECT_ID` | Required | — | Neon project ID (for neon-local container) |
-| `PARENT_BRANCH_ID` | Optional | — | Parent branch for ephemeral fork |
-| `JWT_SECRET` | Any string | Strong secret | JWT signing key |
-| `ARCJET_KEY` | Your key | Your key | Arcjet API key |
+| Variable           | Dev            | Prod           | Description                                |
+| ------------------ | -------------- | -------------- | ------------------------------------------ |
+| `PORT`             | 3000           | 3000           | Server listen port                         |
+| `NODE_ENV`         | development    | production     | Environment mode                           |
+| `DATABASE_URL`     | Set by compose | Neon Cloud URL | Postgres connection string                 |
+| `NEON_LOCAL`       | `true`         | _(unset)_      | Enables Neon Local driver config           |
+| `NEON_LOCAL_HOST`  | `neon-local`   | _(unset)_      | Hostname of the Neon Local container       |
+| `NEON_API_KEY`     | Required       | —              | Neon API key (for neon-local container)    |
+| `NEON_PROJECT_ID`  | Required       | —              | Neon project ID (for neon-local container) |
+| `PARENT_BRANCH_ID` | Optional       | —              | Parent branch for ephemeral fork           |
+| `JWT_SECRET`       | Any string     | Strong secret  | JWT signing key                            |
+| `ARCJET_KEY`       | Your key       | Your key       | Arcjet API key                             |

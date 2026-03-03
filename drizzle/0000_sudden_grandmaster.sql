@@ -4,7 +4,7 @@ CREATE TABLE "users" (
 	"email" varchar(255) NOT NULL,
 	"password" varchar(255) NOT NULL,
 	"role" varchar(50) DEFAULT 'user' NOT NULL,
-	"created_at" timestamp DEFAULT now(),
-	"updated_at" timestamp DEFAULT now(),
+	"createdAt" timestamp DEFAULT now(),
+	"updatedAt" timestamp DEFAULT now(),
 	CONSTRAINT "users_email_unique" UNIQUE("email")
 );
