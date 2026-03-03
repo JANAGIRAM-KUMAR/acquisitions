@@ -208,3 +208,20 @@
 {"level":"info","message":"::1 - - [03/Mar/2026:16:22:21 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 109 \"-\" \"PostmanRuntime/7.51.1\"","service":"acquisitions-api","timestamp":"2026-03-03T16:22:21.841Z"}
 {"level":"info","message":"Fetching all users","service":"acquisitions-api","timestamp":"2026-03-03T16:22:39.009Z"}
 {"level":"info","message":"::1 - - [03/Mar/2026:16:22:40 +0000] \"GET /api/users/ HTTP/1.1\" 200 339 \"-\" \"PostmanRuntime/7.51.1\"","service":"acquisitions-api","timestamp":"2026-03-03T16:22:40.343Z"}
+{"level":"info","message":"Hello from Acquisitions API!","service":"acquisitions-api","timestamp":"2026-03-03T16:59:03.524Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:16:59:03 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-03-03T16:59:03.530Z"}
+{"level":"info","message":"User created successfully: saravanan@gmail.com with role user","service":"acquisitions-api","timestamp":"2026-03-03T17:00:48.886Z"}
+{"level":"info","message":"User Registered successfully: saravanan@gmail.com with role user","service":"acquisitions-api","timestamp":"2026-03-03T17:00:48.891Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:17:00:48 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 121 \"-\" \"PostmanRuntime/7.51.1\"","service":"acquisitions-api","timestamp":"2026-03-03T17:00:48.893Z"}
+{"level":"info","message":"User authenticated successfully: saravanan@gmail.com","service":"acquisitions-api","timestamp":"2026-03-03T17:01:59.971Z"}
+{"level":"info","message":"User signed in successfully: saravanan@gmail.com","service":"acquisitions-api","timestamp":"2026-03-03T17:01:59.972Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:17:01:59 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 120 \"-\" \"PostmanRuntime/7.51.1\"","service":"acquisitions-api","timestamp":"2026-03-03T17:01:59.973Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:23:55 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:23:55.734Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:23:55 +0000] \"GET /api HTTP/1.1\" 200 46 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:23:55.762Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:23:55 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:23:55.779Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:25 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:25.753Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:25 +0000] \"GET /api HTTP/1.1\" 200 46 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:25.776Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:25 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:25.793Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:57 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:57.468Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:57 +0000] \"GET /api HTTP/1.1\" 200 46 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:57.490Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Mar/2026:17:24:57 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-03-03T17:24:57.510Z"}
